@@ -238,21 +238,21 @@ function getRectangleString(width, height) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(str) {
-  const lettersUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const lettersLower = 'abcdefghijklmnopqrstuvwxyz';
-  const reverseLettersUp = 'NOPQRSTUVWXYZABCDEFGHIJKLM';
-  const reverseLettersLower = 'nopqrstuvwxyzabcdefghijklm';
-  strArr = str.split('');
-  let codeStr = ''
-  for(let i = 0; i<str.length;i+=1){
-    if(lettersUp.indexOf(str[i]) !== -1){
-      let index = lettersUp.indexOf(str[i]);
-      let letter = reverseLettersUp
-    } else{
+function encodeToRot13(/* str */) {
+  // const lettersUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  // const lettersLower = 'abcdefghijklmnopqrstuvwxyz';
+  // const reverseLettersUp = 'NOPQRSTUVWXYZABCDEFGHIJKLM';
+  // const reverseLettersLower = 'nopqrstuvwxyzabcdefghijklm';
+  // strArr = str.split('');
+  // const codeStr = '';
+  // for (let i = 0; i < str.length; i += 1) {
+  //   if (lettersUp.indexOf(str[i]) !== -1) {
+  //     const index = lettersUp.indexOf(str[i]);
+  //     const letter = reverseLettersUp;
+  //   } else {
 
-    }
-  }
+  //   }
+  // }
 }
 
 /**
