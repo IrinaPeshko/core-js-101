@@ -294,9 +294,8 @@ function propagateItemsByPositionIndex(arr) {
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
 function get3TopItems(arr) {
-   return arr.sort((a, b) => b - a).slice(0, 3);
+  return arr.sort((a, b) => b - a).slice(0, 3);
 }
-
 
 
 /**
@@ -313,7 +312,7 @@ function get3TopItems(arr) {
  *   [ 1, '2' ] => 1
  */
 function getPositivesCount(arr) {
-   return arr.filter((el) => typeof el === 'number' && el > 0).length;
+  return arr.filter((el) => typeof el === 'number' && el > 0).length;
 }
 
 /**
@@ -393,7 +392,7 @@ function getFalsyValuesCount(arr) {
  *    [ true, 0, 1, 'true' ], true => 1
  */
 function findAllOccurrences(arr, item) {
-  return arr.filter(element => element === item).length;
+  return arr.filter((element) => element === item).length;
 }
 
 /**
@@ -442,17 +441,15 @@ function sortCitiesArray(arr) {
   return arr.sort((a, b) => {
     if (a.country < b.country) {
       return -1;
-    } else if (a.country > b.country) {
+    } if (a.country > b.country) {
       return 1;
-    } else {
-      if (a.city < b.city) {
-        return -1;
-      } else if (a.city > b.city) {
-        return 1;
-      } else {
-        return 0;
-      }
     }
+    if (a.city < b.city) {
+      return -1;
+    } if (a.city > b.city) {
+      return 1;
+    }
+    return 0;
   });
 }
 
@@ -477,11 +474,9 @@ function sortCitiesArray(arr) {
 function getIdentityMatrix(n) {
   return Array(n)
     .fill(0)
-    .map((_, i) =>
-      Array(n)
-        .fill(0)
-        .map((__, j) => (i === j ? 1 : 0))
-    );
+    .map((_, i) => Array(n)
+      .fill(0)
+      .map((__, j) => (i === j ? 1 : 0)));
 }
 
 /**
@@ -498,7 +493,7 @@ function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 function getIntervalArray(start, end) {
-   return Array.from({ length: end - start + 1 }, (_, index) => start + index);
+  return Array.from({ length: end - start + 1 }, (_, index) => start + index);
 }
 
 /**
@@ -557,7 +552,6 @@ function group(array, keySelector, valueSelector) {
     }
     return map;
   }, new Map());
-
 }
 
 
@@ -575,7 +569,7 @@ function group(array, keySelector, valueSelector) {
  *   ['one','two','three'], (x) => x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
 function selectMany(arr, childrenSelector) {
- return arr.map(childrenSelector).flat();
+  return arr.map(childrenSelector).flat();
 }
 
 
@@ -592,7 +586,7 @@ function selectMany(arr, childrenSelector) {
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
 function getElementByIndexes(arr, indexes) {
-   return indexes.reduce((acc, cur) => acc[cur], arr);
+  return indexes.reduce((acc, cur) => acc[cur], arr);
 }
 
 
@@ -615,15 +609,14 @@ function getElementByIndexes(arr, indexes) {
  *
  */
 function swapHeadAndTail(arr) {
-  const length = arr.length;
+  const { length } = arr;
   const middle = Math.floor(length / 2);
   const head = arr.slice(0, middle);
   const tail = arr.slice(length - middle);
   if (length % 2 === 0) {
     return tail.concat(head);
-  } else {
-    return tail.concat(arr[middle], head);
   }
+  return tail.concat(arr[middle], head);
 }
 
 
